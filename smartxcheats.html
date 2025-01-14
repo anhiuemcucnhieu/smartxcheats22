@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart X Cheats - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0f0f1a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(52, 152, 219, 0.5);
+        }
+
+        .discord-btn {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .discord-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 26px solid rgba(255, 255, 255, 0.15);
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Smart X Cheats</h1>
+        <div class="buttons">
+            <a href="https://cdn.discordapp.com/attachments/1308096248561143892/1328379013583867996/smrat_XCheats_2.rar?ex=67867cdc&is=67852b5c&hm=573533b836f6beefa2a7af2cd1a20b735d7080cfd0ba51ede0fd6ac2edde0fcd&" class="download-btn">Download Smart X Cheats</a>
+            <a href="https://discord.gg/rpwYuF55">
+                <img src="https://imgur.com/EbWxymT.png" alt="Discord" class="discord-btn">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function createTriangle() {
+            const triangle = document.createElement('div');
+            triangle.classList.add('triangle');
+            triangle.style.left = Math.random() * window.innerWidth + 'px';
+            triangle.style.top = '-20px';
+            // Làm chậm tốc độ rơi
+            triangle.style.animationDuration = Math.random() * 4 + 3 + 's';
+            document.body.appendChild(triangle);
+
+            triangle.addEventListener('animationend', () => {
+                triangle.remove();
+            });
+        }
+
+        // Giảm tần suất tạo tam giác (1000ms = 1 giây)
+        setInterval(createTriangle, 1000);
+    </script>
+</body>
+</html>
